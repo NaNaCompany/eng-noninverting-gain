@@ -1,0 +1,53 @@
+export const tool={
+  "id": "E086",
+  "slug": "eng-noninverting-gain",
+  "title": "비반전 연산증폭기 이득 계산기",
+  "title_en": "Noninverting Op Amp Gain Calculator",
+  "category": "전기",
+  "category_en": "Electrical engineering",
+  "fields": [
+    {
+      "key": "rf",
+      "label": "피드백 저항 R_f",
+      "label_en": "Feedback resistance R_f",
+      "dimension": "resistance",
+      "example": 9000,
+      "constraint": "nonnegative",
+      "display_unit": "ohm",
+      "display_value": "9000"
+    },
+    {
+      "key": "rg",
+      "label": "접지 저항 R_g",
+      "label_en": "Ground resistance R_g",
+      "dimension": "resistance",
+      "example": 1000,
+      "constraint": "positive",
+      "display_unit": "ohm",
+      "display_value": "1000"
+    }
+  ],
+  "result_label": "비반전 전압 이득 A_v",
+  "result_label_en": "Noninverting voltage gain A_v",
+  "result_dimension": "ratio",
+  "formula": "A_v = 1+R_f/R_g",
+  "purpose": "이상 연산증폭기의 비반전 음귀환 전압이득 계산",
+  "purpose_en": "Calculate ideal noninverting negative-feedback voltage gain.",
+  "assumptions": "R_f≥0, R_g>0. 음귀환이 유지되는 선형 이상 연산증폭기 모델이다. 전원 레일 포화·대역폭·입력 오프셋·출력 부하는 제외한다.",
+  "assumptions_en": "Required: R_f≥0, R_g>0 and linear negative-feedback operation of an ideal op amp. Supply-rail saturation, bandwidth, offset and output loading are excluded.",
+  "sources": [
+    {
+      "label": "Texas Instruments · Noninverting amplifier circuit",
+      "url": "https://www.ti.com/tool/CIRCUIT060022"
+    },
+    {
+      "label": "Texas Instruments · SBOA271A · Noninverting Amplifier",
+      "url": "https://www.ti.com/lit/an/sboa271a/sboa271a.pdf"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "site": "https://nanalab.kr/eng-noninverting-gain/",
+  "repository": "https://github.com/NaNaCompany/eng-noninverting-gain",
+  "output_unit": "1"
+};
